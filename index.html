@@ -6,28 +6,30 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Welcome to Arizona</title>
   </head>
-  <body>
+  <body class="home-page">
     <header>
       <img src="assets/azlogo.webp" alt="arizona logo" class="logo" />
       <h1>Welcome to Arizona</h1>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#cities">Cities</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="phoenix.html">Phoenix</a></li>
+          <li><a href="tucson.html">Tucson</a></li>
+          <li><a href="flagstaff.html">Flagstaff</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <div class="main-layout">
       <aside class="home-page-table">
-        <h2>Facts about Arizona</h2>
+        <h2>Fun Facts about Arizona</h2>
         <table>
           <thead>
             <tr>
               <th>Fact</th>
               <th>Details</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -53,6 +55,17 @@
             </tr>
           </tbody>
         </table>
+        <p class="source"></p>
+        <p>
+          Source:
+          <a
+            href="https://azgovernor.gov/governor/arizona-facts"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Arizona Facts from AZ Governor Site
+          </a>
+        </p>
       </aside>
 
       <main>
@@ -68,6 +81,7 @@
             </p>
           </section>
         </section>
+
         <section id="cities-container">
           <div class="city">
             <h3>Phoenix</h3>
@@ -92,6 +106,38 @@
         </section>
       </main>
     </div>
-    <footer><p>Footer content here</p></footer>
+
+    <footer>
+      <div class="footer-content">
+        <p>This website was a coursework project completed by Tristan Tate.</p>
+        <div class="footer-links">
+          <a
+            href="https://www.linkedin.com/in/tristantate/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <img
+              src="assets/linkedin-icon.png"
+              alt="LinkedIn Icon"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://github.com/tristanjtate"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <img
+              src="assets/github-icon.png"
+              alt="GitHub Icon"
+              class="social-icon"
+            />
+          </a>
+        </div>
+        <p>&copy; 2024 Tristan Tate. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
