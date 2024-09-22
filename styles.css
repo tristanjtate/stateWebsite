@@ -263,12 +263,13 @@ th {
   font-weight: bold; /* Bold header text */
   padding: 12px 15px; /* Add padding */
   text-align: left; /* Align text to the left */
+  border: 2px ridge burlywood;
 }
 
 /* Table cell styling */
 td {
   padding: 12px 15px; /* Add padding for table cells */
-  border: 1px solid #ddd; /* Light gray border */
+  border: 3px ridge burlywood; /* Light gray border */
 }
 
 /* Zebra stripe rows */
@@ -312,12 +313,40 @@ tr:hover {
   display: flex;
   flex-direction: column;
 }
-.city-section-image {
+
+/* applies to phoenix */
+.phx-section-image {
   background-image: url(assets/phx-section.jpg);
   background-size: cover;
   background-position: center;
 }
-.city-card h2 {
+.phoenix-page .city-card h2 {
+  text-align: center;
+  color: aliceblue;
+  text-shadow: 1px 1px 5px black;
+}
+
+/* applies to tucson */
+.tucson-section-image {
+  background-image: url(assets/tucson-banner.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.tucson-page .city-card h2 {
+  text-align: center;
+  color: aliceblue;
+  text-shadow: 2px 2px 10px black;
+}
+
+/* applies to flagstaff */
+.flagstaff-section-image {
+  background-image: url(assets/flagstaff-banner2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.flagstaff-page .city-card h2 {
   text-align: center;
   color: aliceblue;
   text-shadow: 1px 1px 5px black;
