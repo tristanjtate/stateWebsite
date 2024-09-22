@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Contact Page for Arizona Site</title>
+  </head>
+  <body class="home-page">
+    <header>
+      <img src="assets/azlogo.webp" alt="arizona logo" class="logo" />
+      <h1>Welcome to Arizona</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="phoenix.html">Phoenix</a></li>
+          <li><a href="tucson.html">Tucson</a></li>
+          <li><a href="flagstaff.html">Flagstaff</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main page container aside and main -->
+    <div class="main-layout">
+      <!-- aside just holds image -->
+      <aside class="contact-page-aside">
+        <p>Havasu Falls, AZ</p>
+      </aside>
+
+      <main id="contact-form-main">
+        <h1>Ask a Question!</h1>
+        <!-- form starts  I am omitting "action": and keeping it client side -->
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="confirmEmail">Confirm Email Address:</label>
+            <input
+              type="email"
+              id="confirmEmail"
+              name="confirmEmail"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="question">Ask a Question:</label>
+            <textarea
+              id="question"
+              name="question"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+        <p>
+          This contact form was created as part of a project to demonstrate
+          HTML, CSS, and JavaScript skills. It is designed to collect user
+          information without submitting data to a server.
+        </p>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>This website was a coursework project completed by Tristan Tate.</p>
+        <div class="footer-links">
+          <a
+            href="https://www.linkedin.com/in/tristantate/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <img
+              src="assets/linkedin-icon.png"
+              alt="LinkedIn Icon"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://github.com/tristanjtate"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <img
+              src="assets/github-icon.png"
+              alt="GitHub Icon"
+              class="social-icon"
+            />
+          </a>
+        </div>
+        <p>&copy; 2024 Tristan Tate. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
