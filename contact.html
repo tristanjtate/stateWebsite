@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
 
     <title>Contact Page for Arizona Site</title>
   </head>
@@ -34,7 +35,7 @@
       </aside>
 
       <main id="contact-form-main">
-        <h1>Ask a Question!</h1>
+        <h1 id="contactHeader">Ask a Question!</h1>
         <!-- form starts  I am omitting "action": and keeping it client side -->
         <form id="contactForm">
           <div class="form-group">
@@ -74,6 +75,9 @@
 
           <button type="submit">Submit</button>
         </form>
+        <div id="successMessage" style="display: none; color: green">
+          Thanks for stopping by. Form submitted successfully!
+        </div>
         <p>
           This contact form was created as part of a project to demonstrate
           HTML, CSS, and JavaScript skills. It is designed to collect user

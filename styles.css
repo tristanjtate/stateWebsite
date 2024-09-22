@@ -416,7 +416,7 @@ aside {
   background-size: cover;
   position: relative;
   min-width: auto;
-  min-height: 600px;
+  min-height: 700px;
 }
 
 .contact-page-aside p {
@@ -498,3 +498,5 @@ button:hover {
   background-color: #218838;
   transform: scale(1.1);
 }
+
+/* media queries */
