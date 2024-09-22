@@ -108,7 +108,7 @@ main {
 /* Home Card */
 #home-card {
   border: 1px solid #ccc;
-  height: 400px;
+  height: auto;
   display: flex;
   margin: 20px 0;
   background-image: url("assets/arizona.jpg");
@@ -258,6 +258,9 @@ table {
   border-collapse: collapse; /* Collapse borders into a single border */
   margin: 20px 0; /* Add some margin above and below the table */
   font-size: 1rem; /* Set font size for the table */
+  margin-top: 20px;
+  z-index: 0;
+  position: relative;
 }
 
 /*  table Header styling */
@@ -299,6 +302,9 @@ tr:hover {
 /* adjust top attractions to the bottom by making aside relative and attraction container abs*/
 aside {
   position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 .attraction-container {
   background-color: #f9f9f9; /* Light background color */
@@ -437,7 +443,7 @@ aside {
 #contactForm {
   border: 2px solid black;
   box-shadow: 10px 10px 10px black;
-  min-width: 700px;
+  min-width: 500px;
   border-radius: 12px;
   padding: 100px;
   margin-bottom: 10px;
@@ -500,3 +506,281 @@ button:hover {
 }
 
 /* media queries */
+
+/* Base styles (applied to all devices by default) */
+
+/* ========== Mobile (Portrait) ========== */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #home-card {
+    padding: 10px;
+    height: auto; /* Adjusts height for smaller screens */
+  }
+
+  #section-in-home-card {
+    width: 80%;
+  }
+  aside {
+    position: static;
+  }
+
+  .attraction-container {
+    position: static;
+  }
+  aside,
+  table {
+    margin-bottom: 20px; /* Adds space between sections */
+  }
+
+  /* Image adjustments */
+  img {
+    width: 100%; /* Images take full width on small screens */
+  }
+}
+
+/* ========== Tablet (Portrait) ========== */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .main-layout {
+    grid-template-columns: 1fr; /* Stack content vertically */
+    gap: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Larger buttons and links */
+  button,
+  a {
+    font-size: 1.1rem;
+  }
+
+  aside {
+    margin-bottom: 20px;
+    position: static;
+  }
+
+  .attraction-container {
+    position: static;
+  }
+}
+
+/* ========== Tablet (Landscape) ========== */
+@media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-layout {
+    grid-template-columns: 1fr 2fr; /* Two-column layout */
+    gap: 20px;
+  }
+
+  /* Adjust table size */
+  table {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}
+
+/* ========== Desktop (Small Screens) ========== */
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+    padding: 30px;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .main-layout {
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+  }
+
+  aside {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
+  #home-card {
+    height: 400px; /* Restores the larger height for desktops */
+    padding: 20px;
+  }
+}
+
+/* ========== Large Desktop ========== */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+    padding: 40px;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-layout {
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+  }
+
+  aside,
+  table {
+    margin-bottom: 30px;
+  }
+
+  table {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  img {
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent images from growing too large */
+  }
+}
+
+/* media query for contact page */
+/* ========== Mobile Devices (up to 600px) ========== */
+@media (max-width: 768px) {
+  /* General Body Styles */
+  body.contact-page {
+    font-size: 14px; /* Reduce font size for mobile */
+    padding: 10px; /* Add some padding for breathing room */
+  }
+
+  /* Contact Form Layout */
+  #conact-form-main {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    width: 20%; /* Full width */
+    padding: 0; /* Remove excess padding */
+  }
+
+  /* Form and Form Group Styles */
+  form {
+    width: 100%; /* Form should take full width of the container */
+    max-width: 90%; /* Ensure it doesn't go beyond full width */
+    padding: 15px; /* Add some internal padding */
+  }
+
+  .form-group {
+    width: 100%; /* Form groups should also take full width */
+    margin-bottom: 15px; /* Space between fields */
+  }
+
+  input,
+  textarea {
+    width: 100%; /* Form inputs take full width */
+    padding: 10px; /* Add some padding for touch input */
+  }
+
+  button {
+    width: 100%; /* Submit button takes full width */
+    padding: 10px;
+    font-size: 16px;
+  }
+  /* Target the specific paragraph within the contact form */
+  #contact-form-main p {
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds space between the form and the paragraph */
+    width: 80%; /* Ensure it takes full width */
+    font-size: 14px; /* Adjusts the font size */
+    color: #333; /* Adjust the text color if needed */
+  }
+
+  /* Aside Section for Image */
+  aside.contact-page-aside {
+    display: none; /* Hide the aside image on small screens to reduce clutter */
+  }
+
+  /* Header Adjustment */
+  header {
+    text-align: center; /* Center the text in header */
+    padding: 10px;
+  }
+
+  header img.logo {
+    width: 80px; /* Reduce the size of the logo */
+    height: auto;
+  }
+
+  header nav ul {
+    flex-direction: column; /* Stack navigation links */
+    gap: 10px;
+  }
+
+  /* Footer Adjustments */
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
+
+  footer .footer-links a {
+    margin: 5px;
+  }
+}
+
+/* media queries for nav for mobile */
+
+@media (max-width: 600px) {
+  /* Stack navigation links vertically on mobile */
+  nav ul {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start;
+    border: 3px ridge brown;
+    border-radius: 12px;
+    box-shadow: 1px 1px 2px black;
+  }
+
+  /* Adjust font size and padding for smaller screens */
+  nav ul li a {
+    font-size: 14px; /* Larger font size for readability on mobile */
+    width: 80%; /* Make links take full width of the container */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+    color: darkolivegreen;
+  }
+
+  nav ul li {
+    width: 80%; /* Make list items take full width */
+  }
+}
