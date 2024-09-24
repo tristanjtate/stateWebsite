@@ -297,6 +297,11 @@ tr:hover {
   background-color: #f1f1f1; /* Slightly darker background when hovering */
 }
 
+/* links on sep lines for sources */
+.source a {
+  display: block;
+}
+
 /* Attraction container */
 
 /* adjust top attractions to the bottom by making aside relative and attraction container abs*/
@@ -313,7 +318,7 @@ aside {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   margin-top: 1px;
   position: absolute;
-  bottom: 200px;
+  bottom: 100px;
 }
 
 /* Attraction heading */
