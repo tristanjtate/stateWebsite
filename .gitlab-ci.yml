@@ -1,12 +1,15 @@
-image: alpine:latest
+# image: alpine:latest
 
-pages:
-  script:
-    - mkdir public
-    - cp -r [!public]* public/
+# pages:
+#   script:
+#     - mkdir public
+#     - cp -r [!public]* public/
 
-  artifacts:
-    paths:
-      - public
-  only:
-    - working #my working branch
+#   artifacts:
+#     paths:
+#       - public
+#   only:
+#     - working #my working branch
+
+
+not used for github
